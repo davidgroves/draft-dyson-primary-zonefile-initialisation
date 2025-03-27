@@ -76,6 +76,10 @@ The following is in addition to the conventions and definitions as defined in "D
 
 The use of parenthesis in the examples is as described in "Domain Names - Implementation and Specification" ({{RFC1035}}) Section 5.1.
 
+## Master File
+
+The term "master file" is as per the description in "Domain Names - Implementation and Specification" ({{RFC1035}}) Section 5, noting that some software products offer data stores for the master file that are not an actual file on a filesystem, such as a database.
+
 ## Primary Server
 
 Within DNS servers, specifically when transferring zones to other servers, there is the concept of a primary server and a secondary server in each transfer relationship.
@@ -83,10 +87,6 @@ Within DNS servers, specifically when transferring zones to other servers, there
 Each secondary server will be transferring the zone from a configured upstream primary server, which may, itself, be a secondary server to a further upstream primary server, and so on.
 
 However, within this document, the term "primary server" is used specifically to mean the primary server at the root of the AXFR/IXFR dependency graph. This server is where the resource records that form the zone's content are maintained in the master file. Thus, that server does not transfer the zone from another server.
-
-## Master File
-
-The term "master file" is as per the description in "Domain Names - Implementation and Specification" ({{RFC1035}}) Section 5, noting that some software products offer data stores for the master file that are not an actual file on a filesystem, such as a database.
 
 # Catalog Zone Properties
 
